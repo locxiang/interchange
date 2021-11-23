@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <!-- Site Metas -->
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+
+  <title>大数据</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="header">
+  <div class="header-title">
+    大数据网信管理平台
+  </div>
+  <div class="header-left">
+    <div id="personCenter"><img src="./images/wxjd.png" style="width:50px;height:50px;"></div>
+    <div class="wen-du"></div>
+    <div id="time"></div>
+    <div class="date-container">
+      <div id="week"></div>
+      <div id="date"></div>
+    </div>
+  </div>
+  <div style="display: none" class="header-Center" id="personal">
+    <div>
+      <ol>
+        <div class="header-a">个人中心</div>
+        <div class="header-a flex">
+          <div>
+            名称:
+          </div>
+          <div id="editDiv" class="flex text-style" style="margin-left: 8px">
+            <span class="text-style">我的系统名称</span>
+            <span id="editName" class="text-style" style="margin-left: 16px;cursor: pointer">修改</span>
+          </div>
+          <div class="flex" id="formDiv" style="display: none">
+            <input type="text" style="width: 256px;height: 32px;margin-left: 12px">
+            <div class="btn" id="saveName">保存</div>
+            <div class="btn" id="cancelSave">取消</div>
+          </div>
+        </div>
+        <div class="header-b">登陆详情
+          <a class="title" onclick="f()">&#8595;</a>
+        </div>
+        <div class="dropdown" style="">
+          <div class="dropdown-a">
+            <p>时间<span class="fa fa-inbox"></span></p>
+            <ol>
+              <li>2021-08-20 16:39:33</li>
+              <li>2021-08-20 15:35:51</li>
+            </ol>
+          </div>
+          <div class="dropdown-a">
+            <p>机型<span class="fa fa-gear"></span></p>
+            <ol>
+              <li>pc-windows</li>
+              <li>pc-os-17</li>
+            </ol>
+          </div>
+          <div class="dropdown-a">
+            <p>IP<span class="fa fa-sign-out"></span>
+            </p>
+            <ol>
+              <li>321.22.111.10</li>
+              <li>321.29.13.1.</li>
+            </ol>
+          </div>
+          <div class="dropdown-a">
+            <p>操作<span class="fa fa-gear"></span>
+            </p>
+            <ol>
+              <li>登陆舆情报告系统</li>
+              <li>登陆舆情监测系统</li>
+            </ol>
+          </div>
+          <!-- <p>机型<span class="fa fa-gear"></span>
+           </p>
+           <p>IP<span class="fa fa-sign-out"></span>
+           </p>
+           <p>操作<span class="fa fa-gear"></span>
+           </p>-->
+        </div>
+        <div class="header-a"><a href="#" onclick="quit()">退出</a></div>
+      </ol>
+    </div>
+  </div>
+
+  <div class="apps" id="apps">
+
+  </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/dayjs.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+<script>
+  function quit() {
+    parentEvent('quit')
+
+  }
+
+  function parentEvent(name, data) {
+    // 是用widow调用vue绑定的vueDefinedMyProp方法
+    window.parent[name](data)
+  }
+
+  function jump(name) {
+    parentEvent('jump', name)
+  }
+</script>
+</body>
+</html>

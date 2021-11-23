@@ -1,0 +1,236 @@
+{
+  "authorityId": "888",
+  "casbinInfos": [
+    {
+      "path": "/base/login",
+      "method": "POST"
+    },
+    {
+      "path": "/jwt/jsonInBlacklist",
+      "method": "POST"
+    },
+    {
+      "path": "/user/register",
+      "method": "POST"
+    },
+    {
+      "path": "/user/getUserList",
+      "method": "user"
+    },
+    {
+      "path": "/user/setUserInfo",
+      "method": "PUT"
+    },
+    {
+      "path": "/user/getUserInfo",
+      "method": "GET"
+    },
+    {
+      "path": "/user/changePassword",
+      "method": "POST"
+    },
+    {
+      "path": "/user/setUserAuthority",
+      "method": "POST"
+    },
+    {
+      "path": "/api/createApi",
+      "method": "POST"
+    },
+    {
+      "path": "/api/deleteApi",
+      "method": "POST"
+    },
+    {
+      "path": "/api/updateApi",
+      "method": "POST"
+    },
+    {
+      "path": "/api/getApiList",
+      "method": "POST"
+    },
+    {
+      "path": "/api/getAllApis",
+      "method": "POST"
+    },
+    {
+      "path": "/api/getApiById",
+      "method": "POST"
+    },
+    {
+      "path": "/api/deleteApisByIds",
+      "method": "DELETE"
+    },
+    {
+      "path": "/authority/copyAuthority",
+      "method": "POST"
+    },
+    {
+      "path": "/authority/createAuthority",
+      "method": "POST"
+    },
+    {
+      "path": "/authority/deleteAuthority",
+      "method": "POST"
+    },
+    {
+      "path": "/authority/updateAuthority",
+      "method": "PUT"
+    },
+    {
+      "path": "/authority/getAuthorityList",
+      "method": "POST"
+    },
+    {
+      "path": "/authority/setDataAuthority",
+      "method": "POST"
+    },
+    {
+      "path": "/casbin/updateCasbin",
+      "method": "POST"
+    },
+    {
+      "path": "/casbin/getPolicyPathByAuthorityId",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/addBaseMenu",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/getMenu",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/deleteBaseMenu",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/updateBaseMenu",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/getBaseMenuById",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/getMenuList",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/getBaseMenuTree",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/getMenuAuthority",
+      "method": "POST"
+    },
+    {
+      "path": "/menu/addMenuAuthority",
+      "method": "POST"
+    },
+    {
+      "path": "/fileUploadAndDownload/upload",
+      "method": "POST"
+    },
+    {
+      "path": "/fileUploadAndDownload/deleteFile",
+      "method": "POST"
+    },
+    {
+      "path": "/fileUploadAndDownload/getFileList",
+      "method": "POST"
+    },
+    {
+      "path": "/system/getServerInfo",
+      "method": "POST"
+    },
+    {
+      "path": "/system/getSystemConfig",
+      "method": "POST"
+    },
+    {
+      "path": "/system/setSystemConfig",
+      "method": "POST"
+    },
+    {
+      "path": "/customer/customer",
+      "method": "PUT"
+    },
+    {
+      "path": "/customer/customer",
+      "method": "POST"
+    },
+    {
+      "path": "/customer/customer",
+      "method": "DELETE"
+    },
+    {
+      "path": "/customer/customer",
+      "method": "GET"
+    },
+    {
+      "path": "/customer/customerList",
+      "method": "GET"
+    },
+    {
+      "path": "/autoCode/getDB",
+      "method": "GET"
+    },
+    {
+      "path": "/autoCode/getTables",
+      "method": "GET"
+    },
+    {
+      "path": "/autoCode/createTemp",
+      "method": "POST"
+    },
+    {
+      "path": "/autoCode/preview",
+      "method": "POST"
+    },
+    {
+      "path": "/autoCode/getColumn",
+      "method": "GET"
+    },
+    {
+      "path": "/autoCode/getMeta",
+      "method": "POST"
+    },
+    {
+      "path": "/autoCode/rollback",
+      "method": "POST"
+    },
+    {
+      "path": "/autoCode/getSysHistory",
+      "method": "POST"
+    },
+    {
+      "path": "/autoCode/delSysHistory",
+      "method": "POST"
+    },
+    {
+      "path": "/sysDictionaryDetail/updateSysDictionaryDetail",
+      "method": "PUT"
+    },
+    {
+      "path": "/sysDictionaryDetail/createSysDictionaryDetail",
+      "method": "POST"
+    },
+    {
+      "path": "/sysDictionaryDetail/deleteSysDictionaryDetail",
+      "method": "DELETE"
+    },
+    {
+      "path": "/sysDictionaryDetail/findSysDictionaryDetail",
+      "method": "GET"
+    },
+    {
+      "path": "/sysDictionaryDetail/getSysDictionaryDetailList",
+      "method": "GET"
+    },
+    {
+      "path": "/sysDictionary/createSysDictionary",
+      "method": "POST"
+    }
+    }
