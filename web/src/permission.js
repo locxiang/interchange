@@ -3,7 +3,7 @@ import { store } from '@/store/index'
 import getPageTitle from '@/utils/page'
 let asyncRouterFlag = 0
 
-const whiteList = ['Login', 'Init','userLogin']
+const whiteList = ['Login', 'Init','userLogin','Index']
 
 const getRouter = async() => {
   await store.dispatch('router/SetAsyncRouter')

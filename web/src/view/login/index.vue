@@ -168,7 +168,7 @@ export default {
           if (!flag) {
             this.loginVerify()
           }else {
-            console.log('aa',this.userInfo)
+            console.log('aa',this.userInfo.authority)
             router.push({ name: this.userInfo.authority.defaultRouter })
           }
         } else {

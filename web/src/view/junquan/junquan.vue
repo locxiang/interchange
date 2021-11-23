@@ -119,7 +119,7 @@ import {
   getJunquanList,
   updateJunquan
 } from '@/api/junquan' //  此处请自行替换地址
-import { getUserList } from '@/api/user'
+import { getKehuList } from '@/api/user'
 import infoList from '@/mixins/infoList'
 
 export default {
@@ -129,7 +129,7 @@ export default {
     return {
       searchInfo:{},
       users: [],
-      usersAPI: getUserList,
+      getKehuApi:getKehuList,
       listApi: getJunquanList,
       dialogFormVisible: false,
       type: '',
@@ -145,7 +145,7 @@ export default {
   },
   async created() {
     await this.getTableData()
-    this.usersAPI({ page: 1, pageSize: 10000 }).then(res => {
+    this.getKehuApi({ page: 1, pageSize: 10000 }).then(res => {
       console.log(res.data.list)
 
       this.users = res.data.list

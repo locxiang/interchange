@@ -37,8 +37,8 @@ export const user = {
       state.userInfo = {}
       state.token = ''
       sessionStorage.clear()
-      router.push({ name: 'Index', replace: true })
-      window.location.reload()
+      // router.push({ name: 'Index', replace: true })
+      window.location.href = '/'
     },
     ResetUserInfo(state, userInfo = {}) {
       state.userInfo = { ...state.userInfo,

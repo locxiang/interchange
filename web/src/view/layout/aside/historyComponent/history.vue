@@ -1,23 +1,25 @@
 ﻿<template>
   <div class="router-history">
     <el-tabs
-      v-model="activeValue"
-      :closable="!(historys.length===1&&$route.name===defaultRouter)"
-      type="card"
-      @contextmenu.prevent="openContextMenu($event)"
-      @tab-click="changeTab"
-      @tab-remove="removeTab"
+        v-model="activeValue"
+        :closable="!(historys.length===1&&$route.name===defaultRouter)"
+        type="card"
+        @contextmenu.prevent="openContextMenu($event)"
+        @tab-click="changeTab"
+        @tab-remove="removeTab"
     >
       <el-tab-pane
-        v-for="item in historys"
-        :key="name(item)"
-        :label="item.meta.title"
-        :name="name(item)"
-        :tab="item"
-        class="gva-tab"
+          v-for="item in historys"
+          :key="name(item)"
+          :label="item.meta.title"
+          :name="name(item)"
+          :tab="item"
+          class="gva-tab"
       >
         <template #label>
-          <span :style="{color: activeValue===name(item)?activeColor:'#333'}"><i class="dot" :style="{ backgroundColor:activeValue===name(item)?activeColor:'#ddd'}" /> {{ item.meta.title }}</span>
+          <span :style="{color: activeValue===name(item)?activeColor:'#333'}"><i class="dot"
+                                                                                 :style="{ backgroundColor:activeValue===name(item)?activeColor:'#ddd'}"
+          /> {{ item.meta.title }}</span>
         </template>
       </el-tab-pane>
     </el-tabs>
@@ -52,14 +54,14 @@ export default {
       top: 0,
       isCollapse: false,
       isMobile: false,
-      rightActive: ''
+      rightActive: '',
     }
   },
   computed: {
     ...mapGetters('user', ['userInfo', 'activeColor']),
     defaultRouter() {
       return this.userInfo.authority.defaultRouter
-    }
+    },
   },
   watch: {
     contextMenuVisible() {
@@ -74,7 +76,7 @@ export default {
       }
     },
     $route(to, now) {
-      if (to.name === 'Login') {
+      if (to.name === 'Login' || to.name === 'userLogin') {
         return
       }
       this.historys = this.historys.filter(item => !item.meta.closeTab)
@@ -84,7 +86,7 @@ export default {
       if (now && to && now.name === to.name) {
         emitter.emit('reload')
       }
-    }
+    },
   },
   created() {
     // 全局监听 关闭当前页面函数
@@ -105,14 +107,14 @@ export default {
       {
         name: this.defaultRouter,
         meta: {
-          title: '首页'
+          title: '首页',
         },
         query: {},
-        params: {}
-      }
+        params: {},
+      },
     ]
     this.historys =
-      JSON.parse(sessionStorage.getItem('historys')) || initHistorys
+        JSON.parse(sessionStorage.getItem('historys')) || initHistorys
     if (!window.sessionStorage.getItem('activeValue')) {
       this.activeValue = getFmtString(this.$route)
     } else {
@@ -159,11 +161,11 @@ export default {
         {
           name: this.defaultRouter,
           meta: {
-            title: '首页'
+            title: '首页',
           },
           query: {},
-          params: {}
-        }
+          params: {},
+        },
       ]
       this.$router.push({ name: this.defaultRouter })
       this.contextMenuVisible = false
@@ -176,11 +178,11 @@ export default {
           right = item
         }
         return (
-          getFmtString(item) === this.rightActive
+            getFmtString(item) === this.rightActive
         )
       })
       const activeIndex = this.historys.findIndex(
-        item => getFmtString(item) === this.activeValue
+          item => getFmtString(item) === this.activeValue,
       )
       this.historys.splice(0, rightIndex)
       if (rightIndex > activeIndex) {
@@ -197,7 +199,7 @@ export default {
         return (getFmtString(item) === this.rightActive)
       })
       const activeIndex = this.historys.findIndex(
-        item => getFmtString(item) === this.activeValue
+          item => getFmtString(item) === this.activeValue,
       )
       this.historys.splice(leftIndex + 1, this.historys.length)
       if (leftIndex < activeIndex) {
@@ -244,8 +246,8 @@ export default {
         this.historys.push(obj)
       }
       window.sessionStorage.setItem(
-        'activeValue',
-        getFmtString(this.$route)
+          'activeValue',
+          getFmtString(this.$route),
       )
     },
     changeTab(component) {
@@ -253,15 +255,15 @@ export default {
       this.$router.push({
         name: tab.name,
         query: tab.query,
-        params: tab.params
+        params: tab.params,
       })
     },
     removeTab(tab) {
       const index = this.historys.findIndex(
-        item => getFmtString(item) === tab
+          item => getFmtString(item) === tab,
       )
       if (
-        getFmtString(this.$route) === tab
+          getFmtString(this.$route) === tab
       ) {
         if (this.historys.length === 1) {
           this.$router.push({ name: this.defaultRouter })
@@ -270,20 +272,20 @@ export default {
             this.$router.push({
               name: this.historys[index + 1].name,
               query: this.historys[index + 1].query,
-              params: this.historys[index + 1].params
+              params: this.historys[index + 1].params,
             })
           } else {
             this.$router.push({
               name: this.historys[index - 1].name,
               query: this.historys[index - 1].query,
-              params: this.historys[index - 1].params
+              params: this.historys[index - 1].params,
             })
           }
         }
       }
       this.historys.splice(index, 1)
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -302,9 +304,11 @@ export default {
   color: #333;
   box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
-.el-tabs__item .el-icon-close{
+
+.el-tabs__item .el-icon-close {
   color: initial !important;
 }
+
 .el-tabs__item .dot {
   content: "";
   width: 9px;
@@ -319,6 +323,7 @@ export default {
   margin: 0;
   padding: 7px 16px;
 }
+
 .contextmenu li:hover {
   background: #f2f2f2;
   cursor: pointer;
