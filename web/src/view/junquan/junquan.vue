@@ -138,7 +138,7 @@ export default {
       formData: {
         url: 'http://supergj.junquan.com.cn',
         username: '',
-        password: '',
+        password: '8d59012a1c6251fcea67331d1352370a7b739d6b',
         user_id: '',
       }
     }
@@ -212,7 +212,7 @@ export default {
       this.formData = {
         url: '',
         username: '',
-        password: '',
+        password: '8d59012a1c6251fcea67331d1352370a7b739d6b',
         user_id: '',
       }
     },
