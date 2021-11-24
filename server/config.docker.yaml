@@ -2,7 +2,7 @@
 
 # jwt configuration
 jwt:
-  signing-key: 'qmPlus'
+  signing-key: 'i9RRYv7DADil'
   expires-time: 604800
   buffer-time: 86400
 
@@ -21,7 +21,7 @@ zap:
 # redis configuration
 redis:
   db: 0
-  addr: '177.7.0.14:6379'
+  addr: 'redis:6379'
   password: ''
 
 # email configuration
@@ -54,11 +54,11 @@ captcha:
 
 # mysql connect configuration
 mysql:
-  path: ''
+  path: 'mysql'
   config: ''
-  db-name: ''
-  username: ''
-  password: ''
+  db-name: 'interchange'
+  username: 'root'
+  password: 'Aa@6447985'
   max-idle-conns: 10
   max-open-conns: 100
   log-mode: ""
