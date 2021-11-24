@@ -20,7 +20,7 @@ export default {
     return {
       windowWidth: document.documentElement.clientWidth, //实时屏幕宽度
       windowHeight: document.documentElement.clientHeight, //实时屏幕高度
-      getPageUrl: 'public/login.html',
+      getPageUrl: 'static/login.html',
       captchaId: '',
     }
   },

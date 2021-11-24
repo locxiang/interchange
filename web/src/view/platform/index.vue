@@ -18,7 +18,7 @@ export default {
       baseurl: path,
       windowWidth: document.documentElement.clientWidth, //实时屏幕宽度
       windowHeight: document.documentElement.clientHeight, //实时屏幕高度
-      getPageUrl: 'public/job.html',
+      getPageUrl: 'static/job.html',
     }
   },
   created() {
